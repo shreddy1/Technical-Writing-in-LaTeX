@@ -1,1 +1,103 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{url}
 
+
+\title{Abstract Criticism}
+\author{Shreya Reddy}
+
+
+\begin{document}
+
+\maketitle
+
+%ARTICLE 1
+
+\section{\underline{Article 1}}
+\begin{itemize}
+	\item {\bf{Title}}: Constructive discrepancy minimization for convex sets
+	\item {\bf{Abstract}}: 
+
+A classical theorem of Spencer shows that any set system with n sets and n elements
+admits a coloring of discrepancy \verb|O(n^1/2)|.
+Recent exciting work of Bansal, Lovett and Meka shows that such colorings can be found in
+polynomial time. In fact, the Lovett-Meka algorithm finds a half integral point in
+any ``large enough'' polytope. However, their algorithm crucially relies on
+the facet structure and does not apply to general convex sets.
+
+We show that for any symmetric convex set K with measure at least exp(-n/500),
+the following algorithm finds a point y in K \verb|\cap [-1,1]^n| with Omega(n) coordinates in {-1,+1}:
+(1) take a random Gaussian vector x; (2) compute the point y in K \verb|\cap [-1,1]^n| that is closest to x. (3) return y.
+
+This provides another truly constructive proof of Spencer's theorem and the first constructive
+proof of a Theorem of Giannopoulos.
+\end{itemize}
+
+\subsection {\underline{Violations}}
+\begin{itemize}
+	\item[--] The abstract uses formulas(expressions and symbols).
+	\item[--] The abstract uses references to another article.
+	\item[--] {\LaTeX} commands have been used in the abstract.
+	\item[--] The abstract makes a lot of claims.
+\end{itemize}
+
+\subsection {\underline{Improvements/Revisions}}
+\begin{itemize} 
+	\item[--] {\bf{Title}}: Constructive Discrepancy Minimization for Convex Sets
+	\item[--] {\bf{Abstract}}: 
+
+The classical theorem of Spencer shows that any set system with number of sets and number of elements admits a coloring of discrepancy of a certain value.
+
+For any symmetric convex set with a certain measure, the following algorithm finds a point in the said convex set interesting with Omega(n) by taking a random Gaussian vector x and finding the point in the convex set which intersects  with a certain coordinate, and returning y.
+
+As a result, this provides another truly constructive proof of Spencer's theorem and the first constructive proof of a Theorem of Giannopoulos. \cite{convex}
+\end{itemize}
+
+
+
+%ARTICLE 2
+
+\section{\underline{Article 2}}
+\begin{itemize}
+	\item {\bf{Title}}: \verb|($2+\epsilon$)|-SAT is NP-hard
+	\item {\bf{Abstract}}:
+
+We prove the following hardness result for a natural promise variant of the classical CNF-satisfiability problem: Given a CNF-formula where each clause has width \verb|$w$| and the guarantee that there exists an assignment satisfying at least \verb|$g = \lceil \frac{w}{2}\rceil -1$| literals in each clause, it is NP-hard to find a satisfying assignment to the formula (that sets at least one literal to true in each clause). On the other hand, when \verb|$g = \lceil \frac{w}{2}\rceil$|, it is easy to find a satisfying assignment via simple generalizations of the algorithms for \verb|\textsc{$2$-Sat}|.	
+
+Viewing \verb|\textsc{$2$-Sat} $\in \mathrm| \verb|{P}$| as easiness of \verb|\textsc{Sat}| when \verb|$1$-in-$2$| literals are true in every clause, and NP-hardness of \verb|\textsc{$3$-Sat}| as intractability of \verb|\textsc{Sat}| when \verb|$1$|-in-\verb|$3$| literals are true, our result shows, for any fixed \verb|$\eps > 0$|, the hardness of finding a satisfying assignment to instances of \verb|``\textsc{$(2+\eps)$-Sat}''| where the density of satisfied literals in each clause is promised to exceed \verb|$\frac{1}{2+\eps}$|.
+
+We also strengthen the results to prove that given a uniform hypergraph that can be 2-colored such that each edge has perfect balance (at most \verb|$k+1$| vertices of either color), it is NP-hard to find a 2-coloring that avoids a monochromatic edge. In other words, a set system with discrepancy \verb|$1$| is hard to distinguish from a set system with worst possible discrepancy.
+
+Finally, we prove a general result showing intractability of promise CSPs based on the paucity of certain ``weak polymorphisms." The core of the above hardness results is the claim that the only weak polymorphisms in these particular cases are juntas depending on few variables.
+\end{itemize}
+
+\subsection {\underline{Violations}}
+\begin{itemize}
+	\item[--] The title contains symbols and {\LaTeX} commands.
+	\item[--] The abstract uses acronyms
+	\item[--] The abstract uses formulas and {\LaTeX} commands.
+	\item[--] The abstract contains the words "we", "our".
+	\item[--] The abstract contains multiple paragraphs.
+	\item[--] The abstract makes a lot of claims.
+\end{itemize}
+
+\subsection {\underline{Improvements/Revisions}}
+\begin{itemize} 
+	\item[--] {\bf{Title}}: (2 + epsilon)-Sat Is NP-Hard
+	\item[--] {\bf{Abstract}}:
+
+Results for a natural promise variant of the classical CNF-satisfiability problem, where each clause with a certain width guarantees that there exists an assignment satisfying at least a literal in each clause. It is NP-hard to find a satisfying assignment to the formula.
+
+On the other hand, when a clause satisfies a certain value, it is easy to find a satisfying assignment via simple generalizations of the algorithms for 2-SAT. When 1-in-2 literals are true in every clause, and NP-hardness of 3-SAT as intractability of \textsc{Sat} when $1$-in-$3$ literals are true, the results, for any fixed epsilon thats greater than a certain value , the hardness of finding a satisfying assignment to instances of "(2+epsilon)-SAT" where the density of satisfied literals in each clause is promised to exceed a certain value.
+
+The results to prove that given a uniform hypergraph that can be 2-colored such that each edge has perfect balance, it is NP-hard to find a 2-coloring that avoids a monochromatic edge. \cite{NP}
+
+\end{itemize}
+
+
+
+\bibliographystyle{acm}
+ \bibliography{refer.bib}
+
+\end{document}

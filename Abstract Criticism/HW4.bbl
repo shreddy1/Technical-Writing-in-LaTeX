@@ -1,0 +1,11 @@
+\begin{thebibliography}{1}
+
+\bibitem{NP}
+{\sc Austrin, P., Håstad, J., and Guruswami, V.}
+\newblock (2 + epsilon)- {SAT} is {NP}-{H}ard.
+
+\bibitem{convex}
+{\sc Rothvoss, T.}
+\newblock Constructive discrepancy minimization for convex sets.
+
+\end{thebibliography}
