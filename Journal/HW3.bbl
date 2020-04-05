@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{compiler}
+J.~Ullman A.V.~Aho, R.~Sethi.
+\newblock Compilers: Principles techniques and tools, 1986.
+
+\bibitem{sync}
+Daniel Cederman, Bapi Chatterjee, Nhan Nguyen, Yiannis Nikolakopoulos, Marina
+  Papatriantafilou, and Philippas Tsigas.
+\newblock A study of the behavior of synchronization methods in commonly used
+  languages and systems.
+\newblock 2013.
+
+\bibitem{flow}
+J.~Saltz G.~Agrawal.
+\newblock Interprocedural data flow based optimizations for distributed memory
+  compilation.
+
+\bibitem{query}
+Shenoda Guirguis, Mohamed~A. Sharaf, Panos~K. Chrysanthis, and Alexandros
+  Labrinidis.
+\newblock Three-level processing of multiple aggregate continuous queries.
+\newblock 2012.
+
+\bibitem{data}
+Vincenzo Gulisano, Yiannis Nikolakopoulos, Daniel Cederman, Marina
+  Papatriantafilou, and Philippas Tsigas.
+\newblock Efficient data streaming multiway aggregation through concurrent
+  algorithmic designs and new abstract data types, 2017.
+
+\bibitem{real}
+Vincenzo Gulisano, Yiannis Nikolakopoulos, Ivan Walulya, Marina
+  Papatriantafilou, and Philippas Tsigas.
+\newblock Deterministic real-time analytics of geospatial data streams through
+  scalegate objects.
+\newblock 2015.
+
+\bibitem{mobile}
+M.~Kandemir, A.~Choudhary, P.~Banerjee, J.~Ramanujam, and N.~Shenoy.
+\newblock Minimizing data and synchronization costs in one-way communication,
+  2000.
+
+\bibitem{Fortran}
+J.~Mellor-Crummey V.~Adve.
+\newblock Advanced code generation for high performance fortran, 2001.
+
+\end{thebibliography}
