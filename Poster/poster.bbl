@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{domingos}
+J.~Domingos, N.~Simões, P.~Pereira, C.~Silva, and L.~Marcelino.
+\newblock Database synchronization model for mobile devices.
+\newblock In {\em 2014 9th Iberian Conference on Information Systems and
+  Technologies (CISTI)}, pages 1--7. IEEE, 2014.
+
+\bibitem{choi}
+Mi-Young Choi, Eun-Ae Cho, Dae-Ha Park, Jong-Youn Bae, Chang-Joo Moon, and
+  Doo-Kwon Baik.
+\newblock A synchronization algorithm of mobile database for ubiquitous
+  computing.
+\newblock In {\em 2009 Fifth International Joint Conference on INC, IMS and
+  IDC}, pages 416--419. IEEE, 2009.
+
+\bibitem{ramya}
+B~Sri Ramya, Shirin~Bhanu Koduri, and M~Seetha.
+\newblock A stateful database synchronization approach for mobile devices.
+\newblock {\em International Journal of Soft Computing and Engineering
+  (IJSCE)}, (3), 2012.
+
+\bibitem{alhaj}
+Taqwa~A Alhaj, Mariam~M Taha, and Faiza~M Alim.
+\newblock Synchronization wireless algorithm based on message digest (swamd)
+  for mobile device database.
+\newblock In {\em Computing, Electrical and Electronics Engineering (ICCEEE),
+  2013 International Conference on}, pages 259--262. IEEE, 2013.
+
+\bibitem{v}
+V.~Balakumar. and I.~Sakthidevi.
+\newblock An efficient database synchronization algorithm for mobile devices
+  based on secured message digest.
+\newblock In {\em 2012 International Conference on Computing, Electronics and
+  Electrical Technologies (ICCEET)}, pages 937--942. IEEE, 2012.
+
+\bibitem{SM}
+Abdullahi Imam, Shuib Basri, and Rohiza Ahmad.
+\newblock Data synchronization model for heterogeneous mobile databases and
+  server-side database.
+\newblock pages 521--531. IJACSA, 2018.
+
+\end{thebibliography}
