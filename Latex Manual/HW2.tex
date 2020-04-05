@@ -1,1 +1,273 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{indentfirst}
 
+%Adds blank lines between paragraphs
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+\title{Mini \LaTeX  Manual}
+\author{Shreya Reddy}
+\maketitle
+
+\section{Introduction}
+
+{\LaTeX} is a system for typesetting documents. It was created in 1983 by Leslie Lamport. It is pronounced LAH-teck or LAY-teck, or sometimes LAY-tecks\cite{overleaf1}. It is widely used in academia for the publication of scientific documents. It is available as free software for most operating systems.
+
+\noindent A {\LaTeX} document is a plain text file with a .tex extension. It can be typed in a text editor such as Notepad, but its easier to use a {\LaTeX} editor. When typing in the editor we mark the document(title, sections,  lists etc.) structure with tags. When finished we compile it which means converting it into a different file format. They are different file formats the are available but the most preferred one is PDF. 
+
+Some features worth talking about are: typing mathematical formulas how they appear in text books, able to make presentations, plotting graphs like in textbooks, being able to create sections and subsections.
+
+\section{Main Features}
+
+\begin{enumerate}
+  \item \underline {Document Classes}:- This is the first command in {\LaTeX} source file\cite{Overleaf}.
+
+\textbf{Syntax}: \verb|\documentclass[options]{class}| 
+
+\textbf{Example}: \verb|\documentclass[10pt]{report}| 
+
+Some of the document classes that can be used in {\LaTeX}:
+\begin{itemize}
+     \item article- For articles in scientific journals, presentations, and other general uses.
+     \item letter- For writing letters.
+     \item slides- For slide presentations. Class uses big sans serif font.
+   \end{itemize}
+
+  \item \underline{Top Matter}:- The information that is present at the beginning of most documents regarding the document, such as title, date, and author is the top matter.
+
+The \title, \author, and \date are easy to use. You put the title, author, and date in curly brackets {} after the command. Title and author are usually required, but date isn't. If date command is omitted, {\LaTeX} uses the current date. The \maketitle creates the title, which tells the {\LaTeX} that it's complete. If the {\maketitle} is missing, then the title will never be typeset.
+
+\textbf{Example}:
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+\title{LaTeX Manual}
+\author{Shreya Reddy}
+\maketitle
+\end{document}
+\end{verbatim}
+
+If you want to list multiple authors with their affiliations, We need to use the authblk package (\verb|\usepackage{authblk}|).
+
+There are 3 ways of adding authors and their affiliations in {\LaTeX}:
+
+     \begin{enumerate}
+         \item Standard {\LaTeX}- 
+
+\textbf{Syntax}:
+\begin{verbatim}
+\author{...\and...\and...}
+\end{verbatim}
+
+Where each authors/affiliations comes between the \verb|'\and'| commands.
+
+          \item Automatic mode-
+
+\begin{verbatim}
+\author{Name1}
+\affil{Affil1}
+\author{Name2}
+\author{Name3}
+\affil{Affil2}
+.....
+\end{verbatim}
+
+           \item Footnotes explicitly-
+
+\begin{verbatim}
+\author[1]{Name1}
+\author[1]{Name2}
+\author[2]{Name3}
+\affil[1]{Affil1}
+\affil[2]{Affil2}
+....
+\end{verbatim}
+
+     \end{enumerate}
+
+
+  \item \underline{Mathematical Formulas}:- The amsmath package is used to write complicated formulas. The mathtools package\cite{overleaf3} is sometimes used to fix some amsmath quirks.
+\begin{itemize}
+     \item To insert equations- They are written in 'math mode'. To enter into math mode, you use an opening and closing dollar sign \verb|$|. 
+This is used to write mathematical formulas.
+
+\textbf{Example}: \verb|$5*2=10$| which results to $5*2=10$
+
+-If you want an equation to be displayed on its own line then you use \verb|$$...$$|.
+\textbf{Example}: \verb|$$5*2=10$$| gives: $$5*2=10$$
+
+-If you want a numbered equations, use \verb|\begin{equation}..\end{equation}|.
+\textbf{Example}: 
+\begin{verbatim}
+\begin{equation}
+4+5=9
+\end{equation}
+\end{verbatim} gives: \begin{equation} 4+5=9 \end{equation}
+
+-If you want to write a series of equations then you use, \verb|\begin{eqnarray}...\end{eqnarray}|.
+\textbf{Example}: 
+\begin{verbatim}
+\begin{eqnarray}
+x &=&a+b\\
+   &=&d-e
+\end{eqnarray}
+\end{verbatim} gives: \begin{eqnarray}
+x &=&a+b\\
+   &=&d-e
+\end{eqnarray}
+
+-If you want unnumbered equations add a star sybmol '*' after \textit{equation} or \textit{eqnarray} command(\verb|{equation*}| or \verb|{eqnarray*}|).
+
+     \item Math symbols-
+  \begin{itemize}
+     \item Powers \verb|&| Indices: 
+
+Powers are inserted using \verb|'^'|. \verb|$n^2$| gives: $n^2$.
+
+Indices are inserted using\cite{overleaf3} the underscore \verb|'_'|. \verb|$2_n$| gives: $2_n$.
+
+If the power or index has more than one character, group them using \verb|{..}|.
+
+     \item Fractions: These are inserted using \verb|\frac{num}{deno}|.
+
+\textbf{Example}: \verb|$\frac{3}{2}$| gives: $\frac{3}{2}$.
+
+     \item Roots: These are inserted using \verb|\sqrt{..}|. If using a magnitude then,\verb|\sqrt[..]{..}|
+
+\textbf{Example}:\verb|$$\sqrt{x^2}$$| gives: $$\sqrt{x^2}$$
+\textbf{Example}:\verb|$$\sqrt[2]{x^2}$$| gives: $$\sqrt[2]{x^2}$$
+
+     \item Sums \verb|&| Integrals:\verb|\sum| inserts sum symbol and \verb|\int| inserts integral symbol. To insert the upper limit we use \verb|'^'| and lower limit by \verb|'_'|.
+
+\textbf{Sum Ex}: \verb|$\sum_{i=0}^2 x^2$| gives: $\sum_{i=0}^2 x^2$
+
+\textbf{Integral Ex}:\verb|$\int_x^y f(a)$| gives: $\int_x^y f(a)$
+
+     \item Greek alphabets:
+
+\textbf{Syntax}:
+\begin{itemize}
+\item\verb|$\alpha$|
+\item\verb|$\gamma$|
+\item\verb|$\beta$|
+\item\verb|$\theta$|
+\item\verb|$\delta$|
+\item\verb|$\sigma$|
+\item\verb|$\omega$|
+\end{itemize}
+  \end{itemize}
+
+   \end{itemize}
+
+\end{enumerate}
+
+\section{Special Features}
+\begin{enumerate}
+  \item \underline{Bibliography}- There are two ways of writing bibliography in\cite{overleaf4} {\LaTeX}:
+    \begin{itemize}
+        \item  thebibliography environment- In {\LaTeX} thebibliography environment produces a bibliography or a reference list.
+
+If you are using the article class, the list is labelled as 'References' and label is stored in \verb|\refname|.
+If you are using the report class, the list is labelled as 'Bibliography' and label is stored in \verb|\bibname|.
+
+To create the bibliography the command \verb|\bibitem| 
+is used with curly brackets. Inside the curly bracket, you set the label of the entry. After the brace the name of the author, the book title, publisher, and date are entered\cite{overleaf4} .
+\textbf{Example}:
+\begin{verbatim}
+\begin{thebibliography}{2}
+\bibitem{lamp}
+Leslie Lamport,
+  \textit{A document},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+....
+\end{thebibliography}
+\end{verbatim}
+The "2" within the second curly bracket of \verb|\begin{thebibliography}{2}| represnts the number of entries the bibliography can contain.
+
+         \item  BibTeX system- The most commonly used tool in {\LaTeX}. It has the file extension .bib and its stored separately which is imported into the main document.
+
+\textbf{Format}:
+\begin{verbatim}
+@article{Apple24,
+Author = {Birx,R.B. and Beck,X.Y,..},
+Title={Apple and the Elephandt},
+Journal={TUGBoat},
+Volume={50},
+Pages={6-10},
+Year= {2001} }
+\end{verbatim}
+To insert the bibliography, you need to include the line \verb|\bibliography{doc1,...}|
+The \verb|\bibliography| command will produced the bibliography. The arguments inside the \verb|\bibliography| refer to files named doc1.bib which is present in the database in 
+BibTeX format. 
+The entries that are listed in the \verb|\cite| and \verb|\nocite| are listed in the bibliography.
+    \end{itemize}
+
+  \item \underline{Citation}- It's very easy to cite the given document. First go to the point where you would like the citation to appear, then use the command \verb|\cite{cite_key}|.
+
+If you don't want the text in citation, but want the reference then you use the command \verb|\nocite{cite_key}|.
+
+If you want to include a page number in the citation, you use square brackets '[ ]' before the citation key. 
+
+\textbf{Syntax}: \verb|\cite[p.123]{cite_key}|
+
+If you want to cite multiple references, you use curly brackets '{ }' separated by commas ','.
+
+\textbf{Syntax}: \verb|cite{cite1,cite2,cite3,....}|.
+
+If you want to include author-date citations, use the \textbf{natbib} package and use the command \verb|\citep{....}| 
+for a citation in brackets. \textbf{\underline{Eg}}: [Reddy,2018]. Use the command \verb|\citet{...}| 
+for a citation for only the year in the brackets. \textbf{\underline{Eg}}: Reddy [2018]. There are other commands which can be used such as, \verb|\citeauthor|, \verb|\citeyear|, \verb|\citealt|, and many more.
+
+  \item \underline{Color}- You can add color to text, page background, rules, etc. 
+\begin{itemize}
+     \item Add color package\cite{overleaf2}-
+
+You can either use the color or xcolor package. Both the packages provide common colors, but the xcolor is the widely used as it supports a larger variety of colors. 
+\textbf{Syntax}: \verb|usepackage{color}| or \verb|\usepackage{xcolor}|.
+
+     \item Define color-
+
+\textbf{Syntax}: \verb|\definecolor{name}{model}{color-spec}|
+
+\textbf{Example}:\verb|\definecolor{silver}{rgb}{1,0,0}|
+
+     \item Colored text- 
+
+\textbf{Syntax}: \verb|\textcolor{declared-color}{text}|. The declared-color is the color that's defined in \verb|\definecolor|.
+
+Another way of entering colored text: \verb|{\color{declared-color}text}|
+
+     \item Colored boxes-
+
+\textbf{Syntax}:\verb|\colorbox{declared-color}{text}|
+
+If you want a framed background color:
+
+\textbf{Syntax}:\verb|\fcolorbox{declared-color-frame}|
+
+\verb|{declared-bgcolor}{text}|
+
+\textbf{Example}:\verb|\fcolorbox{red}{blue}{Hello}|
+
+     \item Colored pages-
+To change the background color of the entire page: 
+
+\textbf{Syntax}:\verb|\pagecolor{declared-color}|. This sets the background of the page and all the subsequent pages to the declared color. \textbf{Eg}: \verb|\pagecolor{cyan}|
+
+To return the background to normal: \verb|\nopagecolor|.
+
+   \end{itemize}
+
+\end{enumerate}
+
+\bibliographystyle{acm}
+\bibliography{References}
+
+
+
+\end{document}
