@@ -1,1 +1,110 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+%Adds blank lines between paragraphs
+\setlength{\parskip}{0.5em}
+%\usepackage{parskip}
+\setcounter{page}{5}
 
+\begin{document}
+%First section
+\section*{}
+published several papers in the 1830s concerning properties of the function $0^{0^{x}}$ . He noted  [32]
+that $0^x$ is either 0 (if $x>0$) or 1 (if $x=0$) or $\infty (if x<0)$, hence 
+
+\begin{equation}
+\tag{1.17}
+0^{0^{x}} = [x>0].
+\end{equation}
+But of course he didn’t have Iverson’s convention to work with; he was pleased to discover a way
+to denote the discontinuous function [$x>0$] without leaving the realm of operations acceptable in 
+his day. He believed that ''la fonction $0^{0^{x-n}}$ est d'un grand usage dans l'analyse mathématique.''
+And he noted in [33] that his formulas “ne renferment aucune notation nouvelle. ...Les formules
+qu’on obtient de cette manière sont très simples, et rentrent dans l’algèbre ordinaire.”
+
+Libri wrote, for example,
+$$
+(1-0^{0^{-x}})(1-0^{0^{x-a}})
+$$
+for the function [$0\leq x \leq a$], and he gave the integral formula
+\begin{eqnarray*}
+\frac{2}{\pi} \int_{0}^{\infty} \frac{dqcosqx}{1+q^{2}} = e^x \cdot 0^{0^{-x}} + e^{-x}(1-0^{0^{-x}}) = \frac{e^{x}}{0^{-x}+1}+\frac{e^{-x}}{0^{x}+1}.
+\end{eqnarray*}
+(Of course, we would now write the value of that integral a $e^{-|x|}$, but a simple notation for
+absolute value wasn’t introduced until many years later. I believe that the first appearance of $'|z|'$
+for absolute value in Crelle’s journal—the journal containing Libri’s papers [32] and [33]—occurred
+on page 227 of [56] in 1881. Karl Weierstrass was the inventor of this notation, which was applied
+at first only to complex numbers; Weierstrass seems to have published it first in 1876 [55].)
+
+Libri applied his $0^{0^{x}}$ function to number theory by exhibiting a complicated way to describe
+the fact that x is a divisor of m. In essence, he gave the following recursive formulation: Let
+$P_0(x)=1$ and for $k>0$ let
+$$
+P_k(x)=0^{0^{x-k}}P_0(x)-0^{0^{x-k+1}}P_1(x)-\cdots-0^{0^{x-1}}P_{k-1}(x).
+$$
+Then the quantity
+$$
+\frac{1-m\cdot0^{0^{x-m}}P_0(x)-(m-1)0^{0^{x-m+1}}P_1(x)-\cdots-2\cdot0^{0^{x-2}}P_{m-2}(x)-0^{0^{x-1}}P_{m-1}(x)}{x}
+$$
+turns out to equal 1 if x divides m, otherwise it is 0. (One way to prove this, Iverson-wise, is
+to replace $0^{0^{x-k}}$ in Libri’s formulas by [$x>k$], and to show first by induction that $P_k(x)$=
+[x divides k]-[x divides k-1] for all $k>0$. Then if $a_k(x)=k[x>k]$, we have
+\begin{equation*}
+%aligning the equal signs by using "\begin{aligned}" and & symbol near the "="
+\begin{aligned}
+\sum_{k=0}^{m-1} a_{m-k} (x) P_k(x) &= \sum_{k=0}^{m-1} a_{m-k} (x) ([x \text{ divides } k] - [x \text{ divides } k-1])  \\
+ &=  \sum_{k=0}^{m-1} [x \text{ divides } k] (a_{m-k} (x) - a_{m-k-1} (x)). \\
+\end{aligned}
+\end{equation*}
+If the positive integer x is not a divisor of m, the terms of this new sum are zero except when
+m-k-m mod x, when we have $a_{m-k}(x)-a_{m-k-1}(x)=1$. On the other hand if x is a divisor of m,
+the only nonvanishing term occurs for m - k = x, when we have $a_{m-k}(x)-a_{m-k-1}(x)=0-(x-1)$.
+Hence the sum is 1-x [x \text { divides } m]. Libri obtained his complicated formula by a less direct method,
+applying Newton’s identities to compute the sum of the mth powers of the roots of the equation
+$t^{x-1} + t^{x-2} + \cdots + 1 = 0$.)
+
+Evidently Libri’s main purpose was to show that unlikely functions can be expressed in algebraic terms, somewhat as we might wish to show that some complex functions can be computed
+by a Turing Machine. “Give me the function $0^{0^{x}}$, and I’ll give you an expression for [x divides m].''
+But our goal with Iverson’s notation is, by contrast, to find a simple and natural way to express
+quantities that help us solve problems. If we need a function that is 1 if and only if x divides m,
+we can now write [x divides m].
+
+Some of Libri’s papers are still well remembered, but [32] and [33] are not. I found no mention
+of them in \textit{Science Citation Index}, after searching through all years of that index available in our
+library (1955 to date). However, the paper [33] did produce several ripples in mathematical waters
+when it originally appeared, because it stirred up a controversy about whether $0^0$ is defined. Most
+mathematicians agreed that $0^0 = 1$,  but Cauchy [5, page 70] had listed  $0^0$ together with other
+expressions like 0/0 and $\infty - \infty$ in a table of undefined forms. Libri’s justification for the equation
+ $0^0 = 1$ was far from  convincing, and a commentator who signed his name simply “S” rose to
+the attack [45]. August Möbius  [36] defended Libri, by presenting his former professor’s reason
+for believing that $0^0 = 1$ (basically a proof that $lim_{x \to 0+}x^x =1$). Möbius also went further and 
+presented a supposed proof that $lim_{x \to 0+}f(x)^{g(x)} = 1$ whenever $lim_{x \to 0+}f(x) = lim_{x \to 0+}g(x) = 0$.
+Of course “S” then asked [3] whether Möbiuss knew about functions such as $f(x) = e^{-1/x}$ and 
+g(x) = x. (And paper [36] was quietly omitted from the historical record when the collected works
+of Möbius were ultimately published.) The debate stopped there, apparently with the conclusion 
+that $0^0$ should be undefined.
+
+But no, no, ten thousand times no! Anybody who wants the binomial theorem
+
+\begin{equation}
+\tag{1.18}
+(x+y)^n = \sum_{k=0}^{n}{{n} \choose {k}}x^{k}y^{n-k}
+\end{equation}
+to hold for at least one nonnegative integer \textit{n must} believe that $0^0 = 1$, for we can plug in x = 0 and 
+y = 1 to get 1 on the left and $0^0$ on the right.
+
+The number of mappings from the empty set to the empty set is $0^0$. It \textit{has} to be 1.
+
+On the other hand, Cauchy had good reason to consider $0^0$ as an undefined \textit{limiting form}, in
+the sense that the limiting value of $f(x)^{g(x)}$ is not known a \textit{priori} when f(x) and g(x) approach 0
+independently. In this much stronger sense, the value of $0^0$ is less defined than, say, the value of 
+0+0. Both Cauchy and Libri were right, but Libri and his defenders did not understand why truth
+was on their side.
+
+Well, it’s instructive to study mathematical history and to observe how tastes change as
+progress is made. But let’s come closer to the present, to see how Iverson’s convention might
+be useful nowadays. Today’s mathematical literature is, in fact, filled with instances where analogs
+of Iversonian brackets are being used—but the concepts must be expressed in a roundabout way,
+because his convention is not yet established. Here are two examples that I happened to notice
+
+\end{document}
